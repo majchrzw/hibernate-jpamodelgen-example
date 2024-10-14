@@ -18,13 +18,5 @@ dependencies {
 
     testImplementation(kotlin("test"))
 
-    compileOnly("org.hibernate:hibernate-jpamodelgen:6.6.0.Final")
     kapt("org.hibernate.orm:hibernate-jpamodelgen:6.6.0.Final")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
 }
