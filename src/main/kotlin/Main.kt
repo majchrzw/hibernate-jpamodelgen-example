@@ -25,7 +25,7 @@ fun main() {
         }
     postgresContainer.start()
     Thread.sleep(1000) // wait for psql container to start
-    println("Hibernate Bootstrapping example")
+    println("Hibernate Jpamodelgen reproducer")
     val sessionFactory: SessionFactory = initHibernate(postgresContainer)
     postgresContainer.stop()
     println(MyEntity_.SECOND)
