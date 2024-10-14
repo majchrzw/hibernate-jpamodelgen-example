@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.20"
+    kotlin("kapt") version "2.0.20"
 }
 
 group = "org.example"
@@ -16,6 +17,9 @@ dependencies {
     implementation("org.testcontainers:postgresql:1.20.2")
 
     testImplementation(kotlin("test"))
+
+    compileOnly("org.hibernate:hibernate-jpamodelgen:6.6.0.Final")
+    kapt("org.hibernate.orm:hibernate-jpamodelgen:6.6.0.Final")
 }
 
 tasks.test {
